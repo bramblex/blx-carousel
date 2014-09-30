@@ -19,16 +19,19 @@ p2:{
   onPageCavourtIn: function(){
     $('#rotate').hide();
     $('#change').hide();
+
+    setTimeout(function(){
+      $('#rotate').show();
+      $('#rotate').addClass('animated roataeLarge');
+    },500);
   },
   afterPageCavourtIn: function(){
-    $('#rotate').show();
     $('#change').show();
-    $('#rotate').addClass('animated roataeLarge');
-    $('#change').addClass('animated fadeIn delay-2');
+    $('#change').addClass('animated fadeIn delay-1');
   },
   onPageCavourtOut: function(){
     $('#rotate').removeClass('animated roataeLarge');
-    $('#change').removeClass('animated fadeIn delay-2');
+    $('#change').removeClass('animated fadeIn delay-1');
   },
 },
 
@@ -69,37 +72,48 @@ p3:{
 
     }, 200);
 
-    setTimeout(function(){
-      clearTimeout(two);
-      clearTimeout(zero);
-      clearTimeout(one);
-      clearTimeout(four);
-    }, 1000);
+    //setTimeout(function(){
+      //clearTimeout(two);
+      //clearTimeout(zero);
+      //clearTimeout(one);
+      //clearTimeout(four);
+    //}, 1000);
 
   },
 
   afterPageCavourtIn: function(){},
   onPageCavourtOut: function(){
 
-      $('#two').addClass('animated fadeInRight');
-      $('#zero').addClass('animated fadeInRight');
-      $('#one').addClass('animated fadeInRight');
-      $('#four').addClass('animated fadeInRight');
+      $('#two').removeClass('animated fadeInRight');
+      $('#zero').removeClass('animated fadeInRight');
+      $('#one').removeClass('animated fadeInRight');
+      $('#four').removeClass('animated fadeInRight');
 
   },
 },
 
 p4:{
-  cavourtInAnimate: 'fadeIn fast',
+  cavourtInAnimate: 'fadeIn',
   cavourtOutAnimate: 'fadeOutLeft',
-  previousCavourtInAnimate: 'fadeInLeft fast',
+  previousCavourtInAnimate: 'fadeInLeft',
   previousCavourtOutAnimate: 'fadeOutRight',
   onPageCavourtIn: function(){
+
+    if (location.hash !== ''){
+      $('#hash').html(location.hash.replace(/^#/, '')) ;
+    }
+    else{
+      $('#hash').html('_____') ;
+    }
+
     $('#bander').hide();
+
+    setTimeout(function(){
+      $('#bander').show();
+      $('#bander').addClass('animated fadeIn');
+    }, 500);
   },
   afterPageCavourtIn: function(){
-    $('#bander').show();
-    $('#bander').addClass('animated fadeIn');
   },
   onPageCavourtOut: function(){
     $('#bander').removeClass('animated fadeIn');
@@ -114,13 +128,16 @@ p5:{
   onPageCavourtIn: function(){
     $('#time').hide();
     $('#marker').hide();
+
+    setTimeout(function(){
+      $('#time').show();
+      $('#marker').show();
+      $('#time').addClass('animated fadeInUp');
+      $('#marker').addClass('animated bounceInDown');
+    }, 300);
   },
   afterPageCavourtIn: function(){
 
-    $('#time').show();
-    $('#marker').show();
-    $('#time').addClass('animated fadeInUp');
-    $('#marker').addClass('animated bounceInDown');
 
   },
   onPageCavourtOut: function(){
