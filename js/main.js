@@ -43,9 +43,9 @@ p3:{
 },
 
 p4:{
-  cavourtInAnimate: 'fadeIn',
+  cavourtInAnimate: 'fadeIn fast',
   cavourtOutAnimate: 'fadeOutLeft',
-  previousCavourtInAnimate: 'fadeInLeft',
+  previousCavourtInAnimate: 'fadeInLeft fast',
   previousCavourtOutAnimate: 'fadeOutRight',
   onPageCavourtIn: function(){
     $('#bander').hide();
