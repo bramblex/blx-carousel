@@ -137,6 +137,7 @@ body , html {
 }
 
   #p4 .show {
+    /*top: 10%;*/
     width: auto;
     text-align: left;
     margin-right: 3em;
@@ -169,4 +170,5 @@ body , html {
 }
   #p6 #qr {
     opacity: 0.6;
+    width: 9em;
   }
