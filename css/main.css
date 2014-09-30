@@ -164,3 +164,9 @@ body , html {
     width: 4em;
     height: 6em;
   }
+
+#p6{
+}
+  #p6 #qr {
+    opacity: 0.6;
+  }

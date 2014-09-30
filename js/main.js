@@ -152,8 +152,12 @@ p6:{
   previousCavourtInAnimate: 'fadeInLeft',
   previousCavourtOutAnimate: 'fadeOutRight',
   onPageCavourtIn: function(){},
-  afterPageCavourtIn: function(){},
-  onPageCavourtOut: function(){},
+  afterPageCavourtIn: function(){
+    $('#qr').addClass('animated pulse');
+  },
+  onPageCavourtOut: function(){
+    $('#qr').removeClass('animated pulse');
+  },
 },
 
 });
