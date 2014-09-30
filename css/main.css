@@ -121,7 +121,7 @@ body , html {
   }
 
   #p3 .show div {
-    margin: -0.30em;
+    margin: -0.258em;
     padding: 0;
   }
 
@@ -136,8 +136,19 @@ body , html {
 #p4{
 }
 
-  #p3 .show {
-    /*text-align: left;*/
+  #p4 .show {
+    width: auto;
+    text-align: left;
+    margin-right: 3em;
+    margin-left: 3em;
+  }
+
+  #p4 .indent {
+    text-indent: 2em;
+  }
+
+  #p4 .right {
+    text-align: right;
   }
 
   #p4 #bander {
