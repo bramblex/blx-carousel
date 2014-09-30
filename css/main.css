@@ -30,6 +30,7 @@ body , html {
 
   /*background-color: #FFF;*/
   /*color : #fff;*/
+  overflow: hidden;
 }
 
 #p1 {
@@ -78,7 +79,12 @@ body , html {
   }
 
   .show #rotate{
+
+    margin: 0;
+    padding: 0;
+
     width: 8em;
+    height: 8em;
     /*width: 60%;*/
 
     /*color: #EEE;*/
@@ -104,27 +110,27 @@ body , html {
 
 #p3 {
 }
+
+  #p3 .show {
+    top: 1em;
+    text-align: right;
+  }
+
   #p3 .info h1 span{
     font-size: 0.5em;
   }
 
-  #p3 .show {
-    /*text-align: left;*/
+  #p3 .show div {
+    margin: -0.30em;
+    padding: 0;
   }
 
-  #p3 .show div{
-  }
-
-  #p3 .show .two{
-  }
-
-  #p3 .show .zero{
-  }
-
-  #p3 .show .one{
-  }
-
-  #p3 .show .four{
+  #p3 .show img{
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 6em;
+    /*text-align: right;*/
   }
 
 #p4{

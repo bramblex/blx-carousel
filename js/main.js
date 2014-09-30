@@ -37,9 +37,56 @@ p3:{
   cavourtOutAnimate: 'fadeOutLeft',
   previousCavourtInAnimate: 'fadeInLeft',
   previousCavourtOutAnimate: 'fadeOutRight',
-  onPageCavourtIn: function(){},
+  onPageCavourtIn: function(){
+
+    $('#two').hide();
+    $('#zero').hide();
+    $('#one').hide();
+    $('#four').hide();
+
+    var two, zero, one, four;
+
+    two = setTimeout(function(){
+      $('#two').show();
+      $('#two').addClass('animated fadeInRight');
+
+      zero = setTimeout(function(){
+        $('#zero').show();
+        $('#zero').addClass('animated fadeInRight');
+
+        one = setTimeout(function(){
+          $('#one').show();
+          $('#one').addClass('animated fadeInRight');
+
+          four = setTimeout(function(){
+            $('#four').show();
+            $('#four').addClass('animated fadeInRight');
+          }, 200);
+
+        }, 200);
+
+      }, 200);
+
+    }, 200);
+
+    setTimeout(function(){
+      clearTimeout(two);
+      clearTimeout(zero);
+      clearTimeout(one);
+      clearTimeout(four);
+    }, 1000);
+
+  },
+
   afterPageCavourtIn: function(){},
-  onPageCavourtOut: function(){},
+  onPageCavourtOut: function(){
+
+      $('#two').addClass('animated fadeInRight');
+      $('#zero').addClass('animated fadeInRight');
+      $('#one').addClass('animated fadeInRight');
+      $('#four').addClass('animated fadeInRight');
+
+  },
 },
 
 p4:{
