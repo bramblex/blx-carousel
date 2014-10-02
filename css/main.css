@@ -129,7 +129,8 @@ body , html {
     left: 0;
     margin: 0;
     padding: 0;
-    height: 6em;
+    /*height: 5em;*/
+    height: 5em;
     /*text-align: right;*/
   }
 
