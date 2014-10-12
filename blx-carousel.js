@@ -1,4 +1,8 @@
 
+/*
+ * require BlxUtilities
+ */
+
 var BlxCarousel = function(option){
 
   this.timeout = 3000;

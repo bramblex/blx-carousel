@@ -1,9 +1,16 @@
 
-var BlxUtilities = {};
+var BlxUtilities = function(){};
 
-BlxUtilities.emptyFunction = function(){};
+BlxUtilities.prototyp.emptyFunction = function(){};
 
-BlxUtilities.displayAnimate = function(selector, animate, option){
+BlxUtilities.prototyp.extend = function(target, object){
+  for(x in object){
+    if (typeof target[x] === 'undefined')
+      target[x] = object[x];
+  }
+}
+
+BlxUtilities.prototyp.displayAnimate = function(selector, animate, option){
 
   var item = $(selector);
   var delay;
@@ -45,4 +52,16 @@ BlxUtilities.displayAnimate = function(selector, animate, option){
 
   }, delay);
 
+
 };
+
+BlxUtilities.prototyp.location = function(selector, option){
+  var item = $(selector);
+  this.extend(option, {});
+}
+
+BlxUtilities.prototyp.size = function(selector, option){
+  this.extend(option, {});
+  var item = $(selector);
+}
+
