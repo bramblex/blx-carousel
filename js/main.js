@@ -99,8 +99,23 @@ p4:{
   previousCavourtOutAnimate: 'fadeOutRight',
   onPageCavourtIn: function(){
 
+    var name_list = [
+      '陈正位',
+      '蔡雅慧',
+      '李志韡',
+      '李路野',
+      '苏莹子',
+      '职雅茹',
+      '韩婧',
+      '吕安妮',
+      '李小煜',
+      '姚大志'
+    ];
+
     if (location.hash !== ''){
-      $('#hash').html(location.hash.replace(/^#/, '')) ;
+      //$('#hash').html(location.hash.replace(/^#/, '')) ;
+      var n = parseInt(location.hash.replace(/^#/, ''));
+      $('#hash').html(name_list[n]);
     }
     else{
       $('#hash').html('_____') ;
@@ -181,6 +196,11 @@ p6:{
     carousel.width(carousel_page.width());
     carousel.height(body_height);
 
+    if (!("ontouchend" in document ? true : false)){
+      $('#button').show();
+      $('#istouch').html('请按右边的按钮翻页');
+    }
+
   };
 
   var registerEvent = function(){
@@ -191,6 +211,13 @@ p6:{
 
     $('.blx-carousel').swipeRight(function(){
       my_carousel.previousPage();
+    });
+
+    $('#previous-button').click(function(){
+      my_carousel.previousPage();
+    });
+    $('#next-button').click(function(){
+      my_carousel.nextPage();
     });
 
     $(window).resize(initializeSize);

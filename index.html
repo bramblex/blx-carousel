@@ -12,11 +12,15 @@
 <body ontouchmove="event.preventDefault()">
 
   <div id="carousel" class="blx-carousel">
-    <div class="blx-carousel-slider"></div>
+    <!--<div class="blx-carousel-slider"></div>-->
+    <div id="button" style="display: none">
+      <div id="previous-button" class="button-class"><div class="empty"></div><div class="button-icon">《</div></div>
+      <div id="next-button" class="button-class"><div class="empty"></div><div class="button-icon">》</div></div>
+    </div>
 
     <div id="p1" class="blx-carousel-page">
       <h1>邀请函</h1>
-      <p class="animated breath infinite slow">《请向左滑动屏幕</p>
+      <p id="istouch" class="animated breath infinite slow">《请向左滑动屏幕</p>
     </div>
 
     <div id="p2" class="blx-carousel-page">
@@ -37,8 +41,9 @@
         <div id="four"><img src="img/4.jpg" /></div>
       </div>
       <div class="info">
-        <h1>S<span>oftware</span> E<span>ngineering</span></h1>
-        <p>2014第xx大会</p>
+        <!--<h1>S<span>oftware</span> E<span>ngineering</span></h1>-->
+        <h1>软件学院</h1>
+        <p>第五次团员代表大会暨学生代表大会</p>
       </div>
     </div>
 
@@ -46,10 +51,10 @@
       <img id="bander" src="img/bander.jpg"/>
       <div class="show">
         <p>尊敬的<span id="hash">_____</span>主席您好:</p>
-        <p class="indent">我是软件学院团委学生会的xxx，我院将于xxx号，在xxx举办软件学院第五次团员代表大会暨学生代表大会。</p>
+        <p class="indent">我院将于10月18号，在A2-104举办软件学院第五次团员代表大会暨学生代表大会。</p>
         <p class="indent">我们诚挚希望您届时能抽出宝贵时间，莅临指导！</p>
         <p class="indent">此致<br />敬礼！ </p>
-        <p class="right">软件学院团委学生会<br />X年x月x日</p>
+        <p class="right">软件学院团委学生会<br />2014年10月12日</p>
       </div>
     </div>
 
@@ -58,8 +63,8 @@
         <img id="marker" src="img/marker.jpg" />
       </div>
       <div id="time" class="info">
-        <h1>XX月XX日</h1>
-        <p>A2xxx</p>
+        <h1>2014.10.18</h1>
+        <p>A2-104</p>
       </div>
       </div>
 
