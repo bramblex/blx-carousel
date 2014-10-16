@@ -1,6 +1,7 @@
 
 /*
- * require BlxUtilities
+ * require zepto.js
+ * require blx-utilities
  */
 
 var BlxCarousel = function(option){
