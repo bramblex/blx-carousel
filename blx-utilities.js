@@ -3,76 +3,116 @@
  * require zepto.js
  */
 
-var BlxUtilities = function(){};
+(function(){
 
-BlxUtilities.prototyp.emptyFunction = function(){};
+  window.BlxUtilities = {};
 
-BlxUtilities.prototyp.extend = function(target, object){
+  /*
+   * An empty function;
+   */
+  BlxUtilities.emptyFunction = function(){};
 
-  if(!target)
-    target = {};
-  if(!object)
-    object = {};
+  /*
+   *
+   */
+  BlxUtilities.extend = function(target, object){
 
-  for(x in object){
-    if (typeof target[x] === 'undefined')
-      target[x] = object[x];
-  }
-}
+    var reslut = {};
 
-BlxUtilities.prototyp.displayAnimate = function(selector, animate, option){
+    if(!target)
+      target = {};
+    if(!object)
+      object = {};
 
-  var item = $(selector);
-  var delay;
-  var onAnimationStart;
-  var onAnimationEnd;
+    for(x in object){
+      reslut[x] = object[x];
+    }
 
-  if (typeof option === 'object'){
+    for(x in target){
+      reslut[x] = target[x];
+    }
 
-    if (typeof option.delay === 'number')
-      delay = option.delay;
-    else
-      delay = 0;
-
-    if (typeof option.onAnimationStart === 'function')
-      onAnimationStart = option.onAnimationStart;
-    else
-      onAnimationStart = BlxUtilities.emptyFunction;
-
-    if (typeof option.onAnimationEnd === 'function')
-      onAnimationEnd = option.onAnimationEnd;
-    else
-      onAnimationEnd = BlxUtilities.emptyFunction;
-
-  }
-  else{
-    delay = 0;
-    onAnimationStart = BlxUtilities.emptyFunction;
-    onAnimationEnd = BlxUtilities.emptyFunction;
+    return reslut;
   }
 
-  setTimeout(function(){
-    item.addClass(['animated',animate].join(' '));
-    onAnimationStart(item);
+  // @TODO add suport for IE
+  BlxUtilities.getWindowSize = function(){
+    var reslut = {};
+    reslut.width = window.innerWidth;
+    reslut.height = window.innerHeight;
+    return reslut;
+  };
 
-    item.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      item.removeClass(['animated',animate].join(' '));
-      onAnimationEnd(item);
+  BlxUtilities.displayAnimate = function(selector, animate, option){
+
+    var item = $(selector);
+    var o = this.extend(option, {
+      delay : 0,
+      onAnimationStart : this.emptyFunction ,
+      onAnimationEnd : this.emptyFunction
     });
 
-  }, delay);
+    var timer = setTimeout(function(){
+      item.addClass(['animated',animate].join(' '));
+      o.onAnimationStart(item);
 
-};
+      item.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        item.removeClass(['animated',animate].join(' '));
+        o.onAnimationEnd(item);
+      });
 
-BlxUtilities.prototyp.location = function(selector, option){
-  var items = $(selector);
-  this.extend(option, {});
+    }, o.delay);
 
-}
+    return {selector: selector, animate: animate, timer: timer}
+  };
 
-BlxUtilities.prototyp.size = function(selector, option){
-  this.extend(option, {});
-  var item = $(selector);
+  BlxUtilities.clearAnimate = function(o){
+    clearTimeout(o.timer);
+    $(o.selector).removeClass(o.animate);
+  };
 
-}
 
+  BlxUtilities.size = function(selector, width, height, option){
+
+    var item = $(selector);
+    var o = this.extend(option, {
+      reference: null
+    });
+
+    var parent;
+    if( o.reference === null ){
+      parent = $(item).parent();
+    }
+    else{
+      parent = $(o.reference)
+    }
+
+    item.width(width * parent.width());
+    item.height(height * parent.height());
+
+  }
+
+  BlxUtilities.location = function(selector, x, y, option){
+
+    var item = $(selector);
+    var o = this.extend(option, {
+      reference: null
+    });
+
+    var parent;
+    if( o.reference === null ){
+      parent = $(item).parent();
+    }
+    else{
+      parent = $(o.reference)
+    }
+
+    item.css('position', 'absolute');
+    item.css('margin-left', -1 * (item.width() / 2) );
+    item.css('margin-top', -1 * (item.height() / 2) );
+    item.css('left', parent.width() * x );
+    item.css('top', parent.height() * x );
+
+  }
+
+})();
