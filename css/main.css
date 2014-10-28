@@ -1,0 +1,48 @@
+body{
+  font-family: Arial, "MS Trebuchet", sans-serif;
+  color: #666;
+}
+
+p {
+  color: #333;
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #d81368;
+  font-weight: normal;
+}
+
+a {
+  color: #fff;
+  background-color: #445588;
+  border-radius: 5px;
+  padding: 2px 8px;
+  text-decoration: none;
+}
+
+a:hover{
+  background-color: #999;
+}
+
+
+.title-bar {
+  border-radius: 0px 0px 8px 8px;
+  box-shadow: 2px 2px 15px -1px #999;
+
+  width: 100%;
+  background-color: #666;
+  color: #FFF;
+  font-size: 2em;
+  padding: 3px 8px;
+
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
+
+  text-align: center;
+}
+
+.content p{
+  text-indent: 2em;
+}
