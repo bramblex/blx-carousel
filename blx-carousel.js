@@ -57,13 +57,14 @@
     }
   };
 
-  window.BlxCarousel = function(option){
+  BlxCarousel = function(option){
 
     var o = BlxUtilities.extend(option, {
-      id : '#blx-carousel',
+      selector : '#blx-carousel',
       page_class : '.blx-carousel-page',
       size : 'fullscreen',
       timeout : '',
+      lock : true,
       slider_bar: false,
       cavourt_button: false,
 
@@ -73,17 +74,34 @@
 
     BlxUtilities.mixIn(this, o);
 
-    this.__lock = true;
+    this.__page_lock = false;
     this.__current_page = true;
     this.__pages = [];
+
+    $(this.page_class).forEach(function(item, index){
+      this.__pages.push( new BlxCarouselPage('#'+$(item).attr('id'), this.pages[$(item).attr('id')]) );
+    });
+
     //this.__carousel
   }
 
+
+  BlxCarousel.prototype.resize = function(width, height){
+    $(this.selector).height(height);
+    $(this.selector).width(width);
+    $(this.page_class).height(height);
+    $(this.page_class).width(width);
+  };
+
+  BlxCarousel.prototype.__lock = function(){ this.__page_lock = true; };
+
+  BlxCarousel.prototype.__unlock = function(){ this.__page_lock = false; };
+
   BlxCarousel.prototype.cavourt = function(n){
 
-    if (typeof n === 'number'){
+    if(typeof n === 'number'){
 
-      if( n > this.__pages.length -1 || n < 0)
+      if(n > this.__pages.length -1 || n < 0)
         return;
 
       if(n >= this.__current_page){
@@ -91,15 +109,16 @@
         this.__pages[n].action('goIn');
         this.__current_page = n;
         return;
-      };
+      }
       else if(n < this.__current_page){
         this.__pages[this.__current_page].action('backOut');
         this.__pages[n].action('backIn');
         this.__current_page = n;
         return;
       }
+
     }
-    else if (typeof n === 'string'){
+    else if(typeof n === 'string'){
       for(var i = this.__pages.length; i >= 0; i--){
         if(this.__pages[i]['selector'] === n){
           this.cavourt(i);
@@ -108,6 +127,8 @@
       }
     }
   };
+
+  window.BlxCarousel = BlxCarousel;
 
   //window.BlxCarousel = function(option){
 

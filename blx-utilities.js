@@ -36,7 +36,7 @@
   }
 
   BlxUtilities.mixIn = function(target, object){
-    if (typeof target === 'undefined' or typeof object === 'undefined')
+    if (typeof target === 'undefined' || typeof object === 'undefined')
       return;
 
     for (x in object){
@@ -99,6 +99,11 @@
   };
 
 
+  /*
+   * @TODO
+   */
+  BlxUtilities.fontSize = function(){};
+
   BlxUtilities.size = function(selector, width, height, option){
 
     var item = $(selector);
@@ -141,5 +146,10 @@
     item.css('top', parent.height() * x );
 
   }
+
+  BlxUtilities.parseSelector = function(selector){
+    if(!(/(^#|^\.)/g).test(selector))
+      return '#' + selector;
+  };
 
 })();
