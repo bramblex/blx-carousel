@@ -27,18 +27,24 @@ h2 {
 
 
 .title-bar {
+  position: fixed;
   border-radius: 0px 0px 8px 8px;
   box-shadow: 2px 2px 15px -1px #999;
 
-  width: 100%;
   background-color: #666;
   color: #FFF;
   font-size: 2em;
   padding: 3px 8px;
 
-  margin-top: -8px;
-  margin-left: -8px;
-  margin-right: -8px;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  /*width: 100%;*/
+
+  /*margin-top: -8px;*/
+  /*margin-left: -8px;*/
+  /*margin-right: -8px;*/
 
   text-align: center;
 }
@@ -49,7 +55,8 @@ h2 {
 }
 
 .content {
-  padding-bottom: 3em;
+  padding-top: 1.8em;
+  padding-bottom: 2em;
 }
 
 .content p{
