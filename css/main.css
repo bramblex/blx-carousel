@@ -43,6 +43,11 @@ a:hover{
   text-align: center;
 }
 
+.title-bar img{
+  border-radius: 3px;
+  height: 0.74em;
+}
+
 .content p{
   text-indent: 2em;
 }
