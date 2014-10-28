@@ -13,7 +13,7 @@ h2 {
   font-weight: normal;
 }
 
-a {
+.content a {
   color: #fff;
   background-color: #445588;
   border-radius: 5px;
@@ -21,7 +21,7 @@ a {
   text-decoration: none;
 }
 
-a:hover{
+.content a:hover{
   background-color: #999;
 }
 
