@@ -69,8 +69,21 @@ body , html {
 
 #p2 {
 }
+  #bt{
+    position: absolute;
+    width: 100%;
+    top:20%;
+  }
+  #im11{
+    position: absolute;
+    bottom:20%;    
+    width: 100%;
+  }
+  #im1{
+    width: 50%;
+  }
 
-  .show {
+  .show{
     position: absolute;
     width: 100%;
     /*bottom: 62%;*/
@@ -88,7 +101,7 @@ body , html {
     /*width: 60%;*/
 
     /*color: #EEE;*/
-    /*width:100%;*/
+    width:100%;
     /*font-size: 10em;*/
 
     /*font-weight: 400;*/
@@ -110,7 +123,38 @@ body , html {
 
 #p3 {
 }
+  #p{
+    width: 100%;
+  }
+  #pp1{
+    position: absolute;
+    bottom:0%;    
+    width: 100%;
+  }
+  #rr1{
+    position: absolute;
+    bottom:15%;    
+    width: 100%;
 
+  }
+  #gr1{
+    position: absolute;
+    bottom:15%;    
+    width: 100%;
+  }
+  #gr
+  {
+    width: 20%;
+  }
+  #rr
+  {
+    width:20%;
+  }
+  #bt2{
+    position: absolute;
+    width: 100%;
+    top:20%;
+  }
   #p3 .show {
     top: 1em;
     text-align: right;
@@ -136,7 +180,27 @@ body , html {
 
 #p4{
 }
-
+  #xr{
+    width: 100%;
+  }
+  #xrr{
+    position: absolute;
+    bottom:0%;
+  }
+  #bt31{
+    position: absolute;
+    left:20%;
+  }
+  #bt32{
+    position: absolute;
+    top:10%;
+    left:10%;
+  }
+  #bt33{
+    position: absolute;
+    top:20%;
+    right:10%;
+  }
   #p4 .show {
     top: 20%;
     width: auto;
@@ -162,25 +226,111 @@ body , html {
 
 #p5{
 }
-  #p5 #marker {
-    width: 4em;
-    height: 6em;
+  #bt41{
+    position: absolute;
+    top:5%;
+    left:20%;
+  }
+  #bt42{
+    position: absolute;
+    top:10%;
+    right:10%;
+  }
+  #bt43{
+    
+  }
+  #bbt43{
+    position: absolute;
+    top:20%;
+    width:100%;
+  }
+  #xxr{
+    width: 100%;
+  }
+  #xxxr{
+    position: absolute;
+    bottom:0%;
   }
 
 #p6{
 }
+  /*#bt6{
+    position: absolute;
+    margin-left: -50%;
+    width:100%;
+    height:100%;
+    left:50%;
+  }*/
   #p6 #qr {
     opacity: 0.6;
     width: 9em;
   }
 
+#p7{
+}
+  #logo1{
+    position: absolute;
+    width:20%;
+    left:10%;
+  }
+  #logo2{
+    position: absolute;
+    width:20%;
+    left:10%;
+  }
+  #logo11{
+    position: absolute;
+    width: 100%;
+    top:10%;
+  }
+  #logo22{
+    position: absolute;
+    width: 100%;
+    top:10%;
+  }
+  #bt71{
+    position: absolute;
+    top:10%;
+    left:30%;
+  }
+  #bt72{
+    position:absolute;
+    width:100%;
+    top:30%;
+  }
+  #bt73{
+    position:absolute;
+    width:100%;
+    top:50%;
+  }
+  #p8{
+
+  }
+  #mmarker{
+    position:absolute;
+    width:100%;
+    top:30%;
+  }
+  #marker{
+    width:40%;
+  }
+
 #button{
   font-size: 2em;
   position: absolute;
+  /*height: 100%;*/
   height: 100%;
   width: 100%;
+  z-index: 100;
+}
 
-  opacity: 0.2;
+#button .button-class{
+  opacity: 0.1;
+}
+
+#button .button-class:active,
+#button .button-class:hover{
+  opacity: 0.3;
 }
 
   #button #previous-button{
