@@ -9,4 +9,5 @@
   var callback = function(){};
 
   wechat('timeline', data, callback);
+  wechat('friend', data, callback);
 })()
