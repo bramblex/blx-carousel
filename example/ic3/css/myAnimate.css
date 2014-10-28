@@ -1,0 +1,210 @@
+/*@-webkit-keyframes tran {
+  from{
+    tramsform:rotate(90deg);
+    -webkit-tramsform:rotate(90deg);
+  }
+  to
+    tramsform:rotate(0deg);
+    -webkit-tramsform:rotate(0deg);
+  }
+}
+
+@keyframes tran {
+  0%{
+    tramsform:rotate(90deg);
+    -webkit-tramsform:rotate(90deg);
+  }
+  100%{
+    tramsform:rotate(0deg);
+    -webkit-tramsform:rotate(0deg);
+  }
+}
+
+.tran {
+  transform-orgin:50% 150%;
+  -webkit-transform-orgin:50% 150%;
+  -webkit-animation-name: tran;
+  animation-name: tran;
+}
+*/
+
+@-webkit-keyframes tran {
+  0% {
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+  }
+
+  /*70% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+  }
+
+  90% {
+    transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+  }*/
+
+  100% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+}
+
+@keyframes tran {
+  0% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+
+
+  
+
+  100% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+
+}
+
+.tran {
+
+  transform-origin: 50% 200%;
+  -webkit-transform-origin: 50% 200%;
+  animation-timing-function:linear;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-name: tran;
+  animation-name: tran;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+}
+
+
+@-webkit-keyframes tranner {
+  0% {
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+}
+
+@keyframes tranner {
+  0% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+
+
+  
+
+  100% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+
+}
+
+.tranner {
+
+  transform-origin: 50% 200%;
+  -webkit-transform-origin: 50% 200%;
+  /*animation-timing-function:linear;
+  -webkit-animation-timing-function:linear;*/
+  -webkit-animation-name: tranner;
+  animation-name: tranner;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+}
+
+
+@-webkit-keyframes tranright {
+  0% {
+    transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+}
+
+@keyframes tranright {
+  0% {
+    transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+  }
+
+
+  
+
+  100% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+
+}
+
+.tranright {
+
+  transform-origin: 100% 100%;
+  -webkit-transform-origin: 100% 100%;
+/*  animation-timing-function:linear;
+  -webkit-animation-timing-function:linear;*/
+  -webkit-animation-name: tranright;
+  animation-name: tranright;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+}
