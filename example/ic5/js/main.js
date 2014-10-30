@@ -248,8 +248,10 @@ p9:{
     carousel.height(body_height);
 
     if (!("ontouchend" in document ? true : false)){
-      $('#button').show();
-      $('#istouch').html('请按右边的按钮翻页');
+      if (navigator.userAgent.indexOf('Windows Phone') < 0){
+        $('#button').show();
+        $('#istouch').html('请按右边的按钮翻页');
+      }
     }
 
   };
