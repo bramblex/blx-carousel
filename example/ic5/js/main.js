@@ -23,10 +23,10 @@ p2:{
    }});
   },
   afterPageCavourtIn: function(){
-   
+
   },
   onPageCavourtOut: function(){
-    
+
   },
 },
 
@@ -44,7 +44,7 @@ p3:{
       BlxUtilities.displayAnimate('#gr','fadeIn fast',{type:'in'})
     }});
     $('#gr').hide();
-    
+
   },
 
   afterPageCavourtIn: function(){},
@@ -62,7 +62,7 @@ p4:{
     BlxUtilities.displayAnimate('#bt31','fadeInRight slow',{type:'in',onAnimationEnd:function(){
       BlxUtilities.displayAnimate('#bt31','fadeOut',{type:'out'});
     }});
-    
+
     BlxUtilities.displayAnimate('#bt32','fadeInRight',{delay:3000,type:'in'});
     $('#bt32').hide();
     BlxUtilities.displayAnimate('#bt33','fadeInLeft',{delay:3000,type:'in'});
@@ -74,9 +74,9 @@ p4:{
     }});
     $('#xr').hide();
     },
-    
 
-   
+
+
   afterPageCavourtIn: function(){
   },
   onPageCavourtOut: function(){
@@ -99,7 +99,7 @@ p5:{
     }});
     $('#bt43').hide();
     BlxUtilities.displayAnimate('#xxr','fadeInUp fast',{type:'in'});
-    
+
   },
   afterPageCavourtIn: function(){
 
@@ -118,7 +118,7 @@ p6:{
   onPageCavourtIn: function(){
     if(window.body_height<window.body_width)
       $('#bt6').css('font-size',window.body_height);
-    else 
+    else
       $('#bt6').css('font-size',window.body_width);
     BlxUtilities.location("#bt6",0.5,0.5);
     $('#bt6').html('那');
@@ -150,11 +150,11 @@ p6:{
     }
     },200);
 
-  
+
   },
   onPageCavourtOut: function(){
     clearInterval(window.timer);
- 
+
   },
 },
 
@@ -175,10 +175,10 @@ p7:{
       $('#bt73').hide();
   },
   afterPageCavourtIn: function(){
-    
+
   },
   onPageCavourtOut: function(){
-    
+
   },
 },
 p8:{
@@ -201,7 +201,7 @@ p8:{
 
   },
   onPageCavourtOut: function(){
-    
+
   },
 },
 
@@ -230,8 +230,12 @@ p9:{
 
     var carousel = $('.blx-carousel');
     var carousel_page = $('.blx-carousel-page');
-    window.body_width = window.innerWidth;
-    window.body_height = window.innerHeight;
+
+    //window.body_width = window.innerWidth;
+    //window.body_height = window.innerHeight;
+
+    window.body_width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    window.body_height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight ;
 
 
     console.log(body_width, body_height);
