@@ -247,11 +247,15 @@ p9:{
     carousel.width(carousel_page.width());
     carousel.height(body_height);
 
-    if (!("ontouchend" in document ? true : false)){
-      if (navigator.userAgent.indexOf('Windows Phone') < 0){
-        $('#button').show();
-        $('#istouch').html('请按右边的按钮翻页');
-      }
+    //if (!("ontouchend" in document ? true : false)){
+      //if (navigator.userAgent.indexOf('Windows Phone') < 0){
+        //$('#button').show();
+        //$('#istouch').html('请按右边的按钮翻页');
+      //}
+    //}
+    if (!(/mobile/i.test(navigator.userAgent))){
+      $('#button').show();
+      $('#istouch').html('请按右边的按钮翻页');
     }
 
   };
