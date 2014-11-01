@@ -1,0 +1,101 @@
+#loading-page {
+  background-color: #FFF;
+  font-family: Arial, 'MS Trebuchet', sans-serif;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1000;
+}
+
+  #loading-page #loading-info {
+    position: absolute;
+    text-align: center;
+    right: 10%;
+    bottom: 20%;
+    overflow: visible;
+
+    width: 10em;
+  }
+
+    #loading-page #loading-info  #loading-logo {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: rgb(153, 153, 153);
+    }
+
+    @-webkit-keyframes loading-message-animate {
+      0% {
+        letter-spacing: 1.2em;
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+      }
+
+      60% {
+        letter-spacing: 0;
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+
+      70% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+
+      100% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+      }
+    }
+
+    @keyframes loading-message-animate {
+      0% {
+        letter-spacing: 1.2em;
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+      }
+
+      60% {
+        letter-spacing: 0;
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+
+      70% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+
+      100% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+      }
+    }
+
+    #loading-page #loading-info  #loading-message {
+
+      -webkit-animation-duration: 3.6s;
+      animation-duration: 3.6s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+
+      -webkit-animation-name: loading-message-animate;
+      animation-name: loading-message-animate;
+
+      color: rgb(170, 170, 170);
+      font-size: 0.8em;
+      white-space:nowrap;
+
+    }
