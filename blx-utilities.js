@@ -5,7 +5,21 @@
 
 (function(){
 
+
   window.BlxUtilities = {};
+
+  // @TODO
+  var selector_cache = {};
+  BlxUtilities.$ = function(selector){
+    if(typeof selector_cache[selector] !== 'undefined'){
+      selector_cache[selector] = window.$(selector);
+      return selector_cache[selector];
+    }
+    else{
+      return selector_cache[selector];
+    }
+  };
+  //var $ = BlxUtilities.$;
 
   /*
    * An empty function;
@@ -68,23 +82,32 @@
         //type = 'in';
       //if(type.match(/\w+Out(\s*|Right|Left|Up|Down)/))
         //type = 'out';
-      if((/\w+In(\s*|Right|Left|Up|Down)/).test(type))
+      //if((/\w+In(\s*|Right|Left|Up|Down)/).test(type))
+        //type = 'in';
+      //if((/\w+Out(\s*|Right|Left|Up|Down)/).test(type))
+        //type = 'out';
+      if((/\w+In($|\s+|[0-9]|[A-Z])/).test(type)){
         type = 'in';
-      if((/\w+Out(\s*|Right|Left|Up|Down)/).test(type))
+        item.hide();
+      }
+      if((/\w+Out($|\s+|[0-9]|[A-Z])/).test(type)){
         type = 'out';
+      }
     }
 
     var timer = setTimeout(function(){
 
-      if(type === 'in')
-        item.show();
       item.addClass(['animated',animate].join(' '));
+      if(type === 'in'){
+        item.show();
+      }
       o.onAnimationStart(selector);
 
       item.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        if(type === 'out')
-          item.hide();
         item.removeClass(['animated',animate].join(' '));
+        if(type === 'out'){
+          item.hide();
+        }
         o.onAnimationEnd(selector);
       });
 
