@@ -27,14 +27,12 @@
 
     @-webkit-keyframes loading-message-animate {
       0% {
-        letter-spacing: 1.2em;
         opacity: 0;
-        -webkit-transform: translate3d(-100%, 0, 0);
-        transform: translate3d(-100%, 0, 0);
+        -webkit-transform: translate(-5em, 0);
+        transform: translate(-5em, 0);
       }
 
       60% {
-        letter-spacing: 0;
         opacity: 1;
         -webkit-transform: none;
         transform: none;
@@ -48,21 +46,19 @@
 
       100% {
         opacity: 0;
-        -webkit-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0);
+        -webkit-transform: translate(5em, 0);
+        transform: translate(5em, 0);
       }
     }
 
     @keyframes loading-message-animate {
       0% {
-        letter-spacing: 1.2em;
         opacity: 0;
-        -webkit-transform: translate3d(-100%, 0, 0);
-        transform: translate3d(-100%, 0, 0);
+        -webkit-transform: translate(-5em, 0);
+        transform: translate(-5em, 0);
       }
 
       60% {
-        letter-spacing: 0;
         opacity: 1;
         -webkit-transform: none;
         transform: none;
@@ -76,8 +72,8 @@
 
       100% {
         opacity: 0;
-        -webkit-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0);
+        -webkit-transform: translate(5em, 0);
+        transform: translate(5em, 0);
       }
     }
 
