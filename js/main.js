@@ -1,4 +1,5 @@
 (function(){
+
   var data = {
     'img': 'http://bramblex.github.io/blx-carousel/img/logo.png',
     'link': 'http://bramblex.github.io/blx-carousel/',
@@ -6,7 +7,9 @@
     'title': 'BlxCarousel.js'
   };
 
-  var callback = function(){};
+  var callback = function(){
+    alert('感谢分享喵 OwO~');
+  };
 
   wechat('timeline', data, callback);
   wechat('friend', data, callback);
